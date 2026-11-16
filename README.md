@@ -229,7 +229,7 @@ The C++ controller library uses CMake, Ninja, and CTest.
 
 Three sampled MATLAB simulation states are used to verify that the C++ LQR implementation reproduces the MATLAB requested steering commands. The integrated controller and actuator are also compared against three MATLAB actuator transitions using a plant timestep of 0.0003125 s.
 
-The sampled numerical comparisons use a tolerance of \(10^{-12}\) radians. These checks establish agreement at selected reference operating points; they do not establish equivalence over every possible state or operating condition.
+The sampled numerical comparisons use a tolerance of $10^{-12}$ radians. These checks establish agreement at selected reference operating points; they do not establish equivalence over every possible state or operating condition.
 
 ### Automated C++ test coverage
 
