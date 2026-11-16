@@ -1,0 +1,4 @@
+LQR_Controller 2 0.0314883
+Steering_Actuator 2 0.0286459
+Control_Pipeline 2 0.0378786
+---

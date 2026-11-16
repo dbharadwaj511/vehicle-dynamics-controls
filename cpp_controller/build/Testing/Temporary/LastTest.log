@@ -1,0 +1,140 @@
+Start testing: Nov 15 01:39 Pacific Standard Time
+----------------------------------------------------------
+1/3 Testing: LQR_Controller
+1/3 Test: LQR_Controller
+Command: "C:/vehicle-dynamics-controls/cpp_controller/build/test_lqr_controller.exe"
+Directory: C:/vehicle-dynamics-controls/cpp_controller/build
+"LQR_Controller" start time: Nov 15 01:39 Pacific Standard Time
+Output:
+----------------------------------------------------------
+LQR Controller Verification
+
+MATLAB case at t = 1 s
+  Expected: -0.567705579738692 rad
+  Actual:   -0.567705579738692 rad
+  Result:   PASS
+
+MATLAB case at t = 3 s
+  Expected: -0.264259150484387 rad
+  Actual:   -0.264259150484387 rad
+  Result:   PASS
+
+MATLAB case at t = 8 s
+  Expected: -0.201083249788604 rad
+  Actual:   -0.201083249788604 rad
+  Result:   PASS
+
+
+Invalid Input Tests
+NaN lateral velocity: PASS
+Infinite yaw rate: PASS
+Infinite lateral error: PASS
+NaN heading error: PASS
+Infinite feedforward steering: PASS
+Non-finite calculated output: PASS
+
+===========================
+Tests passed: 9
+Tests failed: 0
+ALL TESTS PASSED
+<end of output>
+Test time =   0.06 sec
+----------------------------------------------------------
+Test Passed.
+"LQR_Controller" end time: Nov 15 01:39 Pacific Standard Time
+"LQR_Controller" time elapsed: 00:00:00
+----------------------------------------------------------
+
+2/3 Testing: Steering_Actuator
+2/3 Test: Steering_Actuator
+Command: "C:/vehicle-dynamics-controls/cpp_controller/build/test_steering_actuator.exe"
+Directory: C:/vehicle-dynamics-controls/cpp_controller/build
+"Steering_Actuator" start time: Nov 15 01:39 Pacific Standard Time
+Output:
+----------------------------------------------------------
+Steering Actuator Verification
+
+Upper angle limit
+  Expected: 0.5 rad
+  Actual:   0.5 rad
+  Result:   PASS
+
+Lower angle limit
+  Expected: -0.5 rad
+  Actual:   -0.5 rad
+  Result:   PASS
+
+Positive rate limit
+  Expected: 0.2 rad
+  Actual:   0.2 rad
+  Result:   PASS
+
+Negative rate limit
+  Expected: 0.1 rad
+  Actual:   0.1 rad
+  Result:   PASS
+
+No constraint active
+  Expected: 0.1 rad
+  Actual:   0.1 rad
+  Result:   PASS
+
+
+Invalid Input Tests
+NaN requested steering: PASS
+Infinite previous steering: PASS
+Zero timestep: PASS
+Negative timestep: PASS
+Invalid angle limit: PASS
+Infinite rate limit: PASS
+
+===============================
+Tests passed: 11
+Tests failed: 0
+ALL TESTS PASSED
+<end of output>
+Test time =   0.06 sec
+----------------------------------------------------------
+Test Passed.
+"Steering_Actuator" end time: Nov 15 01:39 Pacific Standard Time
+"Steering_Actuator" time elapsed: 00:00:00
+----------------------------------------------------------
+
+3/3 Testing: Control_Pipeline
+3/3 Test: Control_Pipeline
+Command: "C:/vehicle-dynamics-controls/cpp_controller/build/test_control_pipeline.exe"
+Directory: C:/vehicle-dynamics-controls/cpp_controller/build
+"Control_Pipeline" start time: Nov 15 01:39 Pacific Standard Time
+Output:
+----------------------------------------------------------
+LQR Control Pipeline Verification
+=================================
+
+MATLAB actuator transition at t = 1 s
+  Requested: -0.567705579738692 rad
+  Applied:   -0.0483939628769063 rad
+  Result: PASS
+
+MATLAB actuator transition at t = 3 s
+  Requested: -0.264259150484387 rad
+  Applied:   -0.265477367108084 rad
+  Result: PASS
+
+MATLAB actuator transition at t = 8 s
+  Requested: -0.201083249788604 rad
+  Applied:   -0.201083249788604 rad
+  Result: PASS
+
+=================================
+Tests passed: 3
+Tests failed: 0
+ALL TESTS PASSED
+<end of output>
+Test time =   0.08 sec
+----------------------------------------------------------
+Test Passed.
+"Control_Pipeline" end time: Nov 15 01:39 Pacific Standard Time
+"Control_Pipeline" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Nov 15 01:39 Pacific Standard Time
