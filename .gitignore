@@ -1,0 +1,35 @@
+# CMake and compiled build output
+**/build/
+**/cmake-build-*/
+
+# Compiled binaries and intermediate objects
+*.exe
+*.out
+*.o
+*.obj
+*.a
+*.lib
+*.dll
+*.so
+*.dylib
+
+# MATLAB autosave and editor backup files
+*.asv
+*.m~
+
+# Python cache and virtual environments
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Machine-specific editor settings
+.vscode/
+.idea/
+
+# Operating-system metadata
+.DS_Store
+Thumbs.db
+
+# Generated simulation output
+/run/
